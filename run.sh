@@ -111,7 +111,7 @@ if [ "$1" = "run" ]; then
 
     # Update the mapnik.xml style file
     PROJECTDIR=/home/renderer/src/bikemap-style/
-    /usr/local/bin/carto ${PROJECTDIR}/project.mml > ${PROJECTDIR}/mapnik.xml
+    /usr/bin/carto ${PROJECTDIR}/project.mml > ${PROJECTDIR}/mapnik.xml
 
     # start cron job to trigger consecutive updates
     if [ "$UPDATES" = "enabled" ] || [ "$UPDATES" = "1" ]; then
