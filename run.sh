@@ -80,6 +80,9 @@ if [ "$1" = "import" ]; then
     # Create indexes
     sudo -u postgres psql -d gis -f indexes.sql
 
+    # Create bikemap indexes
+    sudo -u postgres psql -d gis -c "create index gin_trgm_idx on planet_osm_point using gin (name gin_trgm_ops);"
+
     # Register that data has changed for mod_tile caching purposes
     touch /var/lib/mod_tile/planet-import-complete
 
