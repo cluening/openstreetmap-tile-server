@@ -75,7 +75,7 @@ RUN apt-get install -y --no-install-recommends \
   wget \
   zlib1g-dev \
   python3-psycopg2 python3-shapely python3-lxml \
-  python3-geojson python3-flask libapache2-mod-wsgi-py3 \
+  python3-geojson python3-flask python3-requests libapache2-mod-wsgi-py3 \
 && apt-get clean autoclean \
 && apt-get autoremove --yes \
 && rm -rf /var/lib/{apt,dpkg,cache,log}/
